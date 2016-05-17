@@ -47,9 +47,8 @@ public class GreetingRoute extends RouteBuilder {
 
 	@Override
 	public void configure() throws Exception {
-		// you can configure the route rule with Java DSL here
 
-		from(cxfEndpoint).to("amq:queue:greetings");
+		from(cxfEndpoint).to("amq:queue:greetings").to(resultEndpoint);
 	}
 
 }
