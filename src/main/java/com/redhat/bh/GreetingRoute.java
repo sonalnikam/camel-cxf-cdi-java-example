@@ -33,7 +33,7 @@ import io.fabric8.annotations.ServiceName;
 public class GreetingRoute extends RouteBuilder {
 
 	@Inject
-	@Uri("cxfrs:http://localhost:8080?resourceClasses=com.redhat.bh.cxf.GreetingService&bindingStyle=SimpleConsumer")
+	@Uri("cxfrs:http://0.0.0.0:8080?resourceClasses=com.redhat.bh.cxf.GreetingService&bindingStyle=SimpleConsumer")
 	private Endpoint cxfEndpoint;
 
 	@Inject
