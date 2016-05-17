@@ -7,6 +7,18 @@
 			<id>build.repos</id>
 			<repositories>
 				<repository>
+					<id>openshift.repo</id>
+					<name>OpenShift Nexus Repository</name>
+					<url>http://nexus-nexus.rhel-cdk.10.1.2.2.xip.io/repository/red-hat-all/</url>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>never</updatePolicy>
+					</releases>
+				</repository>
+				<repository>
 					<id>rh.group.repo</id>
 					<name>Local Nexus Repository</name>
 					<url>http://10.1.2.1:8081/repository/red-hat/</url>
@@ -106,6 +118,18 @@
 				-->
 			</repositories>
 			<pluginRepositories>
+				<pluginRepository>
+					<id>openshift.repo</id>
+					<name>OpenShift Nexus Repository</name>
+					<url>http://nexus-nexus.rhel-cdk.10.1.2.2.xip.io/repository/red-hat-all/</url>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>never</updatePolicy>
+					</releases>
+				</pluginRepository>
 				<pluginRepository>
 					<id>local.repo</id>
 					<name>Local Nexus Repository</name>
