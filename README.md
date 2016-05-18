@@ -25,7 +25,7 @@ Camel’s Kubernetes Service Discovery mechanism is then used to look up the nam
 Also exposes a Jolokia instance of simpler interrogation.
 
 ### Template
-Produces both the input and output OpenShift namespace artifacts based on the fis-java-openshift image. Also creates the namespace message broker from the A-MQ xPaaS image.
+Produces the OpenShift namespace artifacts based on the fis-java-openshift image. Also creates the namespace message broker from the A-MQ xPaaS image.
 
 ## Usage
 
