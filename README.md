@@ -1,59 +1,38 @@
-# CDI Camel QuickStart
+## Challenges
+Fuse/Camel and A-MQ is an established toolkit for creating integration solutions. Fuse Integration Services and xPaaS A-MQ provide these core technologies as containerised building blocks on OpenShift. Whilst the basic technologies are familiar to anyone used to developing integrations based on Fuse / Fabric 6.2.1 and A-MQ 6.2.1, the documented differences between FIS and Fuse introduce challenges to glueing these two technologies together.
+- https://docs.openshift.com/enterprise/3.1/using_images/xpaas_images/fuse.html#differences-between-fuse-integration-services-and-jboss-fuse
+- https://docs.openshift.com/enterprise/3.1/using_images/xpaas_images/a_mq.html#differences-between-the-jboss-a-mq-xpaas-image-and-the-regular-release-of-jboss-a-mq
+  
+## Location
+- https://github.com/benemon/camel-cxf-cdi-java-example
 
-This example shows how to work with Camel in the Java Container using CDI to configure components,
-endpoints and beans.
+## Core Technologies
+ - Red Hat JBoss xPaaS A-MQ
+ - Red Hat JBoss xPaaS Fuse Integration Services
+ - OpenShift
 
-This example is implemented using Java code with CDI injected resources such as Camel endpoints and Java beans.
+## Solution Components
 
-### Building
+The project is broken down into two components:
 
-The example can be built with
+### Greeting
+Produces a RESTful Camel CXFRS endpoint on /greeting, that will accept any input as an HTTP path parameter and create a message from it e.g:
 
-    mvn clean install
+http://cxf-cdi-java-example.uki-ose3.saleslab.fab.redhat.com/greeting/ben
 
-### Running the example locally
+Camel’s Kubernetes Service Discovery mechanism is then used to look up the namespace A-MQ instance, and the message is enqueued.  
+  
+Also exposes a Jolokia instance of simpler interrogation.
 
-The example can be run locally using the following Maven goal:
+### Template
+Produces both the input and output OpenShift namespace artifacts based on the fis-java-openshift image. Also creates the namespace message broker from the A-MQ xPaaS image.
 
-    mvn clean install exec:java
+## Usage
 
+### OpenShift
 
-### Running the example in fabric8
+The example can also be built and run using the included S2I template *cxf-cdi-java-example.yaml*
 
-It is assumed that OpenShift platform is already running. If not you can find details how to [Install OpenShift at your site](https://docs.openshift.com/enterprise/3.1/install_config/install/index.html).
+The template file can be used to create an OpenShift application template by executing the following command from the project root:
 
-The example can be built and deployed using a single goal:
-
-    mvn -Pf8-deploy
-
-When the example runs in OpenShift, you can use the OpenShift client tool to inspect the status
-
-To list all the running pods:
-
-    oc get pods
-
-Then find the name of the pod that runs this quickstart, and output the logs from the running pods with:
-
-    oc logs <name of pod>
-
-You can also use the OpenShift [web console](https://docs.openshift.com/enterprise/3.1/getting_started/developers/developers_console.html#tutorial-video) to manage the
-running pods, and view logs and much more.
-
-
-### Running the example using OpenShift S2I template
-
-The example can also be built and run using the included S2I template quickstart-template.json.
-
-The application can be run directly by first editing the template file and populating S2I build parameters, including the required parameter GIT_REPO and then executing the command:
-
-    oc new-app -f quickstart-template.json
-
-Alternatively the template file can be used to create an OpenShift application template by executing the command:
-
-    oc create -f quickstart-template.json
-
-
-### More details
-
-You can find more details about running this [quickstart](http://fabric8.io/guide/quickstarts/running.html) on the website. This also includes instructions how to change the Docker image user and registry.
-
+	oc create -f openshift/cxf-cdi-java-example.yaml
