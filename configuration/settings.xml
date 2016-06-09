@@ -79,7 +79,6 @@
 						<updatePolicy>never</updatePolicy>
 					</releases>
 				</repository>
-				
 				<repository>
 					<id>fusesource.m2</id>
 					<name>FuseSource Community Release Repository</name>
@@ -122,7 +121,7 @@
 				<pluginRepository>
 					<id>openshift.repo</id>
 					<name>OpenShift Nexus Repository</name>
-					<url>http://nexus-sdlc.apps.openshift.red/repository/redhat//</url>
+					<url>http://nexus-sdlc.apps.openshift.red/repository/redhat/</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -192,7 +191,7 @@
 						<updatePolicy>never</updatePolicy>
 					</releases>
 				</pluginRepository>
-				<!--
+	
 				<pluginRepository>
 					<id>fusesource.m2</id>
 					<name>FuseSource Community Release Repository</name>
