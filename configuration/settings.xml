@@ -95,7 +95,7 @@
 				<pluginRepository>
 				<id>redhat.ga</id>
 					<name>Red Hat General Availability Repository</name>
-					<url>http://nexus.default.svc.cluster.local:8081repository/redhat-ga/</url>
+					<url>http://nexus.default.svc.cluster.local:8081/repository/redhat-ga/</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -107,7 +107,7 @@
 				<pluginRepository>
 				<id>redhat.ga</id>
 					<name>Red Hat General Availability Repository</name>
-					<url>http://nexus.default.svc.cluster.local:8081repository/redhat-ea/</url>
+					<url>http://nexus.default.svc.cluster.local:8081/repository/redhat-ea/</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
