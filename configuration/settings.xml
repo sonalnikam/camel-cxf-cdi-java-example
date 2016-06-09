@@ -9,7 +9,7 @@
 				<repository>
 					<id>openshift.repo</id>
 					<name>OpenShift Nexus Repository</name>
-					<url>http://nexus-nexus.rhel-cdk.10.1.2.2.xip.io/repository/red-hat-all/</url>
+					<url>http://nexus-sdlc.apps.openshift.red/repository/redhat/</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -18,6 +18,7 @@
 						<updatePolicy>never</updatePolicy>
 					</releases>
 				</repository>
+				<!--
 				<repository>
 					<id>rh.group.repo</id>
 					<name>Local Nexus Repository</name>
@@ -78,7 +79,7 @@
 						<updatePolicy>never</updatePolicy>
 					</releases>
 				</repository>
-				<!--
+				
 				<repository>
 					<id>fusesource.m2</id>
 					<name>FuseSource Community Release Repository</name>
@@ -121,7 +122,7 @@
 				<pluginRepository>
 					<id>openshift.repo</id>
 					<name>OpenShift Nexus Repository</name>
-					<url>http://nexus-nexus.rhel-cdk.10.1.2.2.xip.io/repository/red-hat-all/</url>
+					<url>http://nexus-sdlc.apps.openshift.red/repository/redhat//</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -130,6 +131,7 @@
 						<updatePolicy>never</updatePolicy>
 					</releases>
 				</pluginRepository>
+			<!--
 				<pluginRepository>
 					<id>local.repo</id>
 					<name>Local Nexus Repository</name>
