@@ -9,7 +9,7 @@
 				<repository>
 					<id>openshift.repo</id>
 					<name>OpenShift Nexus Repository</name>
-					<url>http://nexus-sdlc.apps.openshift.red/repository/redhat/</url>
+					<url>http://docker-nexus3.sdlc.svc.cluster.local:8081/repository/redhat/</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -121,7 +121,7 @@
 				<pluginRepository>
 					<id>openshift.repo</id>
 					<name>OpenShift Nexus Repository</name>
-					<url>http://nexus-sdlc.apps.openshift.red/repository/redhat/</url>
+					<url>http://docker-nexus3.sdlc.svc.cluster.local:8081/repository/redhat/</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
