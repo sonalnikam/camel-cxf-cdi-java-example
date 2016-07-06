@@ -6,128 +6,36 @@
 		<profile>
 			<id>build.repos</id>
 			<repositories>
-				<repository>
-				<id>fusesource.m2</id>
-					<name>FuseSource Community Release Repository</name>
-					<url>http://nexus.default.svc.cluster.local:8081/repository/fusesource-ga/</url>
-					<snapshots>
-						<enabled>false</enabled>
-					</snapshots>
-					<releases>
-						<enabled>true</enabled>
-						<updatePolicy>never</updatePolicy>
-					</releases>
-				</repository>
-				<repository>
-				<id>fusesource.ea</id>
-					<name>FuseSource Community Early Access Release Repository</name>
-					<url>http://nexus.default.svc.cluster.local:8081/repository/fusesource-ea/</url>
-					<snapshots>
-						<enabled>false</enabled>
-					</snapshots>
-					<releases>
-						<enabled>true</enabled>
-						<updatePolicy>never</updatePolicy>
-					</releases>
-				</repository>
-				<repository>
-				<id>redhat.ga</id>
-					<name>Red Hat General Availability Repository</name>
-					<url>http://nexus.default.svc.cluster.local:8081/repository/redhat-ga/</url>
-					<snapshots>
-						<enabled>false</enabled>
-					</snapshots>
-					<releases>
-						<enabled>true</enabled>
-						<updatePolicy>never</updatePolicy>
-					</releases>
-				</repository>
-				<repository>
-				<id>redhat.ea</id>
-					<name>Red Hat General Availability Repository</name>
-					<url>http://nexus.default.svc.cluster.local:8081/repository/redhat-ea/</url>
-					<snapshots>
-						<enabled>false</enabled>
-					</snapshots>
-					<releases>
-						<enabled>true</enabled>
-						<updatePolicy>never</updatePolicy>
-					</releases>
-				</repository>
-				<repository>
-				<id>maven.central</id>
-					<name>Maven Central Repository</name>
-					<url>http://nexus.default.svc.cluster.local:8081/repository/maven-central/</url>
-					<snapshots>
-						<enabled>false</enabled>
-					</snapshots>
-					<releases>
-						<enabled>true</enabled>
-						<updatePolicy>never</updatePolicy>
-					</releases>
-				</repository>
+			  <repository>
+				<snapshots>
+				  <enabled>false</enabled>
+				</snapshots>
+				<id>central</id>
+				<name>redhat-all</name>
+				<url>http://artifactory-oss:8081/artifactory/redhat-all</url>
+			  </repository>
+			  <repository>
+				<snapshots />
+				<id>snapshots</id>
+				<name>redhat-all</name>
+				<url>http://artifactory-oss:8081/artifactory/redhat-all</url>
+			  </repository>
 			</repositories>
 			<pluginRepositories>
-				<pluginRepository>
-				<id>fusesource.m2</id>
-					<name>FuseSource Community Release Repository</name>
-					<url>http://nexus.default.svc.cluster.local:8081/repository/fusesource-ga/</url>
-					<snapshots>
-						<enabled>false</enabled>
-					</snapshots>
-					<releases>
-						<enabled>true</enabled>
-						<updatePolicy>never</updatePolicy>
-					</releases>
-				</pluginRepository>
-				<pluginRepository>
-				<id>fusesource.ea</id>
-					<name>FuseSource Community Early Access Release Repository</name>
-					<url>http://nexus.default.svc.cluster.local:8081/repository/fusesource-ea/</url>
-					<snapshots>
-						<enabled>false</enabled>
-					</snapshots>
-					<releases>
-						<enabled>true</enabled>
-						<updatePolicy>never</updatePolicy>
-					</releases>
-				</pluginRepository>
-				<pluginRepository>
-				<id>redhat.ga</id>
-					<name>Red Hat General Availability Repository</name>
-					<url>http://nexus.default.svc.cluster.local:8081/repository/redhat-ga/</url>
-					<snapshots>
-						<enabled>false</enabled>
-					</snapshots>
-					<releases>
-						<enabled>true</enabled>
-						<updatePolicy>never</updatePolicy>
-					</releases>
-				</pluginRepository>
-				<pluginRepository>
-				<id>redhat.ga</id>
-					<name>Red Hat General Availability Repository</name>
-					<url>http://nexus.default.svc.cluster.local:8081/repository/redhat-ea/</url>
-					<snapshots>
-						<enabled>false</enabled>
-					</snapshots>
-					<releases>
-						<enabled>true</enabled>
-						<updatePolicy>never</updatePolicy>
-					</releases>
-				</pluginRepository>
-				<pluginRepository>
-				<id>maven.central</id>
-					<name>Maven Central Repository</name>
-					<url>http://nexus.default.svc.cluster.local:8081/repository/maven-central/</url>
-					<snapshots>
-						<enabled>false</enabled>
-					</snapshots>
-					<releases>
-						<enabled>true</enabled>
-						<updatePolicy>never</updatePolicy>
-					</releases>
-				</pluginRepository>
+			  <pluginRepository>
+				<snapshots>
+				  <enabled>false</enabled>
+				</snapshots>
+				<id>central</id>
+				<name>redhat-all</name>
+				<url>http://artifactory-oss:8081/artifactory/redhat-all</url>
+			  </pluginRepository>
+			  <pluginRepository>
+				<snapshots />
+				<id>snapshots</id>
+				<name>redhat-all</name>
+				<url>http://artifactory-oss:8081/artifactory/redhat-all</url>
+			  </pluginRepository>
 			</pluginRepositories>
 		</profile>
 	</profiles>
@@ -135,6 +43,7 @@
 	<activeProfiles>
 		<activeProfile>build.repos</activeProfile>
 	</activeProfiles>
+	
 </settings>
 
 
