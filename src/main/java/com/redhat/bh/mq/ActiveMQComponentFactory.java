@@ -29,4 +29,15 @@ public class ActiveMQComponentFactory {
         component.setConnectionFactory(factory);
         return component;
     }
+
+    /*
+    @Factory
+    @ServiceName
+    public ActiveMQComponent create(@ServiceName String url, @Configuration ActiveMQConfig config) {
+        ActiveMQComponent component = new ActiveMQComponent();
+        component.setBrokerURL(url);
+        component.setConnectionFactory(new ActiveMQConnectionFactory(url));
+        return component;
+    }*/
+
 }
