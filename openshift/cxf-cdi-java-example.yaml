@@ -264,6 +264,22 @@ objects:
             value: ${AMQ_USER}
           - name: BROKER_AMQ_TCP_PASSWORD
             value: ${AMQ_PASSWORD}
+          - name: JAVA_OPTIONS
+            value: '-javaagent:/opt/appdynamics/javaagent.jar'
+          - name: TZ
+            value: Europe/London
+          - name: APPDYNAMICS_AGENT_APPLICATION_NAME
+            value: ${SERVICE_NAME}
+          - name: APPDYNAMICS_AGENT_TIER_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: APPDYNAMICS_AGENT_NODE_NAME  
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.name
           image: ${SERVICE_NAME}
           imagePullPolicy: Always
           name: ${SERVICE_NAME}
