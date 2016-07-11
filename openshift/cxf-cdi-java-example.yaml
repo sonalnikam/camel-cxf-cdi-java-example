@@ -103,7 +103,7 @@ objects:
     resources: {}
     source:
       git:
-        ref: master
+        ref: fuse-poc
         uri: ${SOURCE_REPOSITORY}
       type: Git
     strategy:
