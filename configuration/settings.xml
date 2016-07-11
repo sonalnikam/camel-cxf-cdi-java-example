@@ -14,7 +14,22 @@
 	  <profiles>
 		<profile>
 			<id>build.repos</id>
-			<repositories>
+				<repositories>
+					<repository>
+						<snapshots>
+						<enabled>false</enabled>
+						</snapshots>
+						<id>central</id>
+						<name>redhat-all</name>
+						<url>http://artifactory-fuse-example.apps.pulsenow.co.uk/artifactory/redhat-all</url>
+					</repository>
+					<repository>
+						<snapshots />
+						<id>snapshots</id>
+						<name>redhat-all</name>
+						<url>http://artifactory-fuse-example.apps.pulsenow.co.uk/artifactory/redhat-all</url>
+					</repository>
+			<!--
 				<repository>
 					<id>fusesource.m2</id>
 					<name>FuseSource Community Release Repository</name>
@@ -75,8 +90,24 @@
 						<updatePolicy>never</updatePolicy>
 					</releases>
 				</repository>
+				-->
 			</repositories>
 			<pluginRepositories>
+					<pluginRepository>
+						<snapshots>
+						<enabled>false</enabled>
+						</snapshots>
+						<id>central</id>
+						<name>redhat-all</name>
+						<url>http://artifactory-fuse-example.apps.pulsenow.co.uk/artifactory/redhat-all</url>
+					</pluginRepository>
+					<pluginRepository>
+						<snapshots />
+						<id>snapshots</id>
+						<name>redhat-all</name>
+						<url>http://artifactory-fuse-example.apps.pulsenow.co.uk/artifactory/redhat-all</url>
+					</pluginRepository>
+			<!--
 				<pluginRepository>
 					<id>fusesource.m2</id>
 					<name>FuseSource Community Release Repository</name>
@@ -137,6 +168,7 @@
 						<updatePolicy>never</updatePolicy>
 					</releases>
 				</pluginRepository>
+				-->
 			</pluginRepositories>
 		</profile>
 	</profiles>

@@ -1,0 +1,13 @@
+kind: "Service"
+apiVersion: "v1"
+metadata:
+  name: "artifactory-service"
+spec:
+  ports:
+    -
+      name: "artifactory"
+      protocol: "TCP"
+      port: 8081
+      targetPort: 8081
+      nodePort: 0
+selector: {} 
