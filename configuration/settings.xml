@@ -7,9 +7,9 @@
 			<id>build.repos</id>
 			<repositories>
 				<repository>
-				<id>fusesource.m2</id>
+					<id>fusesource.m2</id>
 					<name>FuseSource Community Release Repository</name>
-					<url>http://nexus.default.svc.cluster.local:8081/repository/fusesource-ga/</url>
+					<url>https://repo.fusesource.com/nexus/content/groups/public</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -19,9 +19,9 @@
 					</releases>
 				</repository>
 				<repository>
-				<id>fusesource.ea</id>
+					<id>fusesource.ea</id>
 					<name>FuseSource Community Early Access Release Repository</name>
-					<url>http://nexus.default.svc.cluster.local:8081/repository/fusesource-ea/</url>
+					<url>https://repo.fusesource.com/nexus/content/groups/ea</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -31,9 +31,9 @@
 					</releases>
 				</repository>
 				<repository>
-				<id>redhat.ga</id>
+					<id>redhat.ga</id>
 					<name>Red Hat General Availability Repository</name>
-					<url>http://nexus.default.svc.cluster.local:8081/repository/redhat-ga/</url>
+					<url>https://maven.repository.redhat.com/ga</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -43,9 +43,9 @@
 					</releases>
 				</repository>
 				<repository>
-				<id>redhat.ea</id>
-					<name>Red Hat General Availability Repository</name>
-					<url>http://nexus.default.svc.cluster.local:8081/repository/redhat-ea/</url>
+					<id>redhat.ea</id>
+					<name>Red Hat Early Access Repository</name>
+					<url>https://maven.repository.redhat.com/earlyaccess/all/</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -55,9 +55,9 @@
 					</releases>
 				</repository>
 				<repository>
-				<id>maven.central</id>
-					<name>Maven Central Repository</name>
-					<url>http://nexus.default.svc.cluster.local:8081/repository/maven-central/</url>
+					<id>central</id>
+					<name>Maven Central</name>
+					<url>http://uk.maven.org/maven2</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -69,9 +69,9 @@
 			</repositories>
 			<pluginRepositories>
 				<pluginRepository>
-				<id>fusesource.m2</id>
+					<id>fusesource.m2</id>
 					<name>FuseSource Community Release Repository</name>
-					<url>http://nexus.default.svc.cluster.local:8081/repository/fusesource-ga/</url>
+					<url>https://repo.fusesource.com/nexus/content/groups/public</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -81,9 +81,9 @@
 					</releases>
 				</pluginRepository>
 				<pluginRepository>
-				<id>fusesource.ea</id>
+					<id>fusesource.ea</id>
 					<name>FuseSource Community Early Access Release Repository</name>
-					<url>http://nexus.default.svc.cluster.local:8081/repository/fusesource-ea/</url>
+					<url>https://repo.fusesource.com/nexus/content/groups/ea</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -93,9 +93,9 @@
 					</releases>
 				</pluginRepository>
 				<pluginRepository>
-				<id>redhat.ga</id>
+					<id>redhat.ga</id>
 					<name>Red Hat General Availability Repository</name>
-					<url>http://nexus.default.svc.cluster.local:8081/repository/redhat-ga/</url>
+					<url>https://maven.repository.redhat.com/ga</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -105,9 +105,9 @@
 					</releases>
 				</pluginRepository>
 				<pluginRepository>
-				<id>redhat.ga</id>
-					<name>Red Hat General Availability Repository</name>
-					<url>http://nexus.default.svc.cluster.local:8081/repository/redhat-ea/</url>
+					<id>redhat.ea</id>
+					<name>Red Hat Early Access Repository</name>
+					<url>https://maven.repository.redhat.com/earlyaccess/all/</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -117,9 +117,9 @@
 					</releases>
 				</pluginRepository>
 				<pluginRepository>
-				<id>maven.central</id>
-					<name>Maven Central Repository</name>
-					<url>http://nexus.default.svc.cluster.local:8081/repository/maven-central/</url>
+					<id>central</id>
+					<name>Maven Central</name>
+					<url>http://uk.maven.org/maven2</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
