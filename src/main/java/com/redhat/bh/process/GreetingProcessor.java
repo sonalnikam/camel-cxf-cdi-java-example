@@ -12,7 +12,7 @@ import org.apache.cxf.message.MessageContentsList;
 public class GreetingProcessor {
 	
 	private static final String ENV_HOSTNAME = "HOSTNAME";
-	private static final String MSG_GREETING = "Hi, %s! I am %s";
+	private static final String MSG_GREETING = "Good day, %s! I am %s";
 
 	public void processor(Exchange exchange) {
 		String host = System.getenv(ENV_HOSTNAME);
