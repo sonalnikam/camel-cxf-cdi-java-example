@@ -1,41 +1,175 @@
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
                           http://maven.apache.org/xsd/settings-1.0.0.xsd">
-	  <profiles>
+	<profiles>
 		<profile>
 			<id>build.repos</id>
 			<repositories>
-			  <repository>
-				<snapshots>
-				  <enabled>false</enabled>
-				</snapshots>
-				<id>central</id>
-				<name>redhat-all</name>
-				<url>http://artifactory-oss:8081/artifactory/redhat-all</url>
-			  </repository>
-			  <repository>
-				<snapshots />
-				<id>snapshots</id>
-				<name>redhat-all</name>
-				<url>http://artifactory-oss:8081/artifactory/redhat-all</url>
-			  </repository>
+			
+			<!--  Internal repository. Change this as appropriate for your environment -->
+			
+			<!-- 
+				<repository>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<id>central</id>
+					<name>redhat-all</name>
+					<url>http://artifactory-oss:8081/artifactory/redhat-all</url>
+				</repository>
+				<repository>
+					<snapshots />
+					<id>snapshots</id>
+					<name>redhat-all</name>
+					<url>http://artifactory-oss:8081/artifactory/redhat-all</url>
+				</repository>
+ 			-->
+ 			
+				<!-- Red Hat and Community repositories -->
+				<repository>
+					<id>fusesource.m2</id>
+					<name>FuseSource Community Release Repository</name>
+					<url>https://repo.fusesource.com/nexus/content/groups/public</url>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>never</updatePolicy>
+					</releases>
+				</repository>
+				<repository>
+					<id>fusesource.ea</id>
+					<name>FuseSource Community Early Access Release Repository</name>
+					<url>https://repo.fusesource.com/nexus/content/groups/ea</url>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>never</updatePolicy>
+					</releases>
+				</repository>
+				<repository>
+					<id>redhat.ga</id>
+					<name>Red Hat General Availability Repository</name>
+					<url>https://maven.repository.redhat.com/ga</url>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>never</updatePolicy>
+					</releases>
+				</repository>
+				<repository>
+					<id>redhat.ea</id>
+					<name>Red Hat Early Access Repository</name>
+					<url>https://maven.repository.redhat.com/earlyaccess/all/</url>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>never</updatePolicy>
+					</releases>
+				</repository>
+				<repository>
+					<id>central</id>
+					<name>Maven Central</name>
+					<url>http://uk.maven.org/maven2</url>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>never</updatePolicy>
+					</releases>
+				</repository>
 			</repositories>
 			<pluginRepositories>
-			  <pluginRepository>
-				<snapshots>
-				  <enabled>false</enabled>
-				</snapshots>
-				<id>central</id>
-				<name>redhat-all</name>
-				<url>http://artifactory-oss:8081/artifactory/redhat-all</url>
-			  </pluginRepository>
-			  <pluginRepository>
-				<snapshots />
-				<id>snapshots</id>
-				<name>redhat-all</name>
-				<url>http://artifactory-oss:8081/artifactory/redhat-all</url>
-			  </pluginRepository>
+			
+			<!--  Internal plugin repository. Change this as appropriate for your environment -->
+			<!-- 
+				<pluginRepository>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<id>central</id>
+					<name>redhat-all</name>
+					<url>http://artifactory-oss:8081/artifactory/redhat-all</url>
+				</pluginRepository>
+				<pluginRepository>
+					<snapshots />
+					<id>snapshots</id>
+					<name>redhat-all</name>
+					<url>http://artifactory-oss:8081/artifactory/redhat-all</url>
+				</pluginRepository>
+ 			-->
+ 			
+				<!-- Red Hat and Community plugin repositories -->
+				<pluginRepository>
+					<id>fusesource.m2</id>
+					<name>FuseSource Community Release Repository</name>
+					<url>https://repo.fusesource.com/nexus/content/groups/public</url>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>never</updatePolicy>
+					</releases>
+				</pluginRepository>
+				<pluginRepository>
+					<id>fusesource.ea</id>
+					<name>FuseSource Community Early Access Release Repository</name>
+					<url>https://repo.fusesource.com/nexus/content/groups/ea</url>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>never</updatePolicy>
+					</releases>
+				</pluginRepository>
+				<pluginRepository>
+					<id>redhat.ga</id>
+					<name>Red Hat General Availability Repository</name>
+					<url>https://maven.repository.redhat.com/ga</url>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>never</updatePolicy>
+					</releases>
+				</pluginRepository>
+				<pluginRepository>
+					<id>redhat.ea</id>
+					<name>Red Hat Early Access Repository</name>
+					<url>https://maven.repository.redhat.com/earlyaccess/all/</url>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>never</updatePolicy>
+					</releases>
+				</pluginRepository>
+				<pluginRepository>
+					<id>central</id>
+					<name>Maven Central</name>
+					<url>http://uk.maven.org/maven2</url>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>never</updatePolicy>
+					</releases>
+				</pluginRepository>
+
 			</pluginRepositories>
 		</profile>
 	</profiles>
@@ -43,7 +177,7 @@
 	<activeProfiles>
 		<activeProfile>build.repos</activeProfile>
 	</activeProfiles>
-	
+
 </settings>
 
 
