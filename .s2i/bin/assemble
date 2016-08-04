@@ -1,20 +1,17 @@
 #!/bin/bash
 
-# install AppDynamics agent
+# run original assemble script
+/usr/local/s2i/assemble
 
+# install appdynamics agent
 curl -H "Accept: application/zip" https://codeload.github.com/benemon/fis-java-appdynamics-plugin/zip/master -o /deployments/appdynamics.zip
 
 pushd /deployments
 unzip appdynamics.zip
     pushd fis-java-appdynamics-plugin-master/
     mv appdynamics/ ../
-        pushd ver4.1.7.1/
-        chmod 777 logs/
-        popd
     popd
 rm -rf fis-java-appdynamics-plugin-master/
 rm -f appdynamics.zip
 popd
 
-# run original assemble script
-/usr/local/s2i/assemble
