@@ -6,9 +6,9 @@
 
 # install AppDynamics agent
 
-curl -H "Accept: application/zip" https://raw.githubusercontent.com/benemon/fis-java-appdynamics-plugin/master/appdynamics-agent.zip -o $HOME/appdynamics-agent.zip 
+curl -H "Accept: application/zip" https://raw.githubusercontent.com/benemon/fis-java-appdynamics-plugin/master/appdynamics-agent.zip -o ${DEPLOYMENTS_DIR}/appdynamics-agent.zip 
 
-pushd $HOME
+pushd ${DEPLOYMENTS_DIR}
 unzip appdynamics-agent.zip
 rm -f appdynamics-agent.zip
 popd
