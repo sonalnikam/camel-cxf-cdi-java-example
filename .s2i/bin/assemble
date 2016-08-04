@@ -10,6 +10,7 @@ unzip appdynamics.zip
     mv appdynamics/ ../
         pushd ver4.1.7.1/
         chmod 777 logs/
+        popd
     popd
 rm -rf fis-java-appdynamics-plugin-master/
 rm -f appdynamics.zip
