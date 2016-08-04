@@ -10,5 +10,6 @@ curl -H "Accept: application/zip" https://raw.githubusercontent.com/benemon/fis-
 
 pushd $HOME
 unzip appdynamics-agent.zip
+rm -f appdynamics-agent.zip
 popd
 
