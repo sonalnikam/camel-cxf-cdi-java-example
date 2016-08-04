@@ -126,7 +126,8 @@ objects:
       sourceStrategy:
         from:
           kind: ImageStreamTag
-          name: fis-java-appdynamics:latest
+          name: fis-java-openshift:1.0
+          namespace: openshift
       type: Source
     triggers:
     - type: ConfigChange
