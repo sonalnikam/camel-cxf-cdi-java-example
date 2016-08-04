@@ -9,7 +9,7 @@
 			
 			<!--  Internal repository. Change this as appropriate for your environment -->
 			
-			<!-- 
+	 
 				<repository>
 					<snapshots>
 						<enabled>false</enabled>
@@ -24,9 +24,10 @@
 					<name>redhat-all</name>
 					<url>http://artifactory-oss:8081/artifactory/redhat-all</url>
 				</repository>
- 			-->
+
  			
 				<!-- Red Hat and Community repositories -->
+				<!--
 				<repository>
 					<id>fusesource.m2</id>
 					<name>FuseSource Community Release Repository</name>
@@ -87,11 +88,12 @@
 						<updatePolicy>never</updatePolicy>
 					</releases>
 				</repository>
+				-->
 			</repositories>
 			<pluginRepositories>
 			
 			<!--  Internal plugin repository. Change this as appropriate for your environment -->
-			<!-- 
+		
 				<pluginRepository>
 					<snapshots>
 						<enabled>false</enabled>
@@ -106,9 +108,10 @@
 					<name>redhat-all</name>
 					<url>http://artifactory-oss:8081/artifactory/redhat-all</url>
 				</pluginRepository>
- 			-->
+ 		
  			
 				<!-- Red Hat and Community plugin repositories -->
+				<!--
 				<pluginRepository>
 					<id>fusesource.m2</id>
 					<name>FuseSource Community Release Repository</name>
@@ -169,7 +172,7 @@
 						<updatePolicy>never</updatePolicy>
 					</releases>
 				</pluginRepository>
-
+-->
 			</pluginRepositories>
 		</profile>
 	</profiles>
