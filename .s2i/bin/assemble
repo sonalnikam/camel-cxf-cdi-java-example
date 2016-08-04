@@ -1,15 +1,13 @@
 #!/bin/bash
 
-# run original assemble script
-
-/usr/local/s2i/assemble
-
 # install AppDynamics agent
 
-curl -H "Accept: application/zip" https://raw.githubusercontent.com/benemon/fis-java-appdynamics-plugin/master/appdynamics-agent.zip -o /tmp/appdynamics-agent.zip 
+curl -H "Accept: application/zip" https://raw.githubusercontent.com/benemon/fis-java-appdynamics-plugin/master/appdynamics-agent.zip -o /tmp/src/target/hawt-app/appdynamics-agent.zip 
 
-pushd /tmp
+pushd /tmp/src/target/hawt-app/
 unzip appdynamics-agent.zip
 rm -f appdynamics-agent.zip
 popd
 
+# run original assemble script
+/usr/local/s2i/assemble
