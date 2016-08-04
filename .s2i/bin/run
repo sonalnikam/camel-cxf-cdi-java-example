@@ -1,7 +1,8 @@
 #!/bin/bash
 
 if [ x"$APPDYNAMICS_AGENT_ACCOUNT_NAME" != "x" ]; then
-    export JAVA_OPTIONS="-javaagent:/deployments/appdynamics/javaagent.jar"
+    mkdir /deployments/logs
+    export JAVA_OPTIONS="-javaagent:/deployments/appdynamics/javaagent.jar -Dappdynamics.agent.logs.dir=/deployments/logs"
 fi
 
 exec /usr/local/s2i/run
