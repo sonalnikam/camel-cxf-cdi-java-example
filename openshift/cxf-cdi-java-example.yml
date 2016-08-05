@@ -24,7 +24,7 @@ parameters:
   value: appdynamics
   required: true
 - description: AppDynamics Controller Host
-  name: CONTROLLER_HOST_NAME
+  name: APPDYNAMICS_CONTROLLER_HOST_NAME
   value: redhatinc298.saas.appdynamics.com
   required: true
 - description: AppDynamics Controller Port
@@ -288,9 +288,9 @@ objects:
             value: '-javaagent:/opt/appdynamics/javaagent.jar'
           - name: TZ
             value: Europe/London
-          - name: CONTROLLER_HOST
-            value: ${CONTROLLER_HOST}
-          - name: CONTROLLER_HOST
+          - name: APPDYNAMICS_CONTROLLER_HOST_NAME
+            value: ${APPDYNAMICS_CONTROLLER_HOST_NAME}
+          - name: APPDYNAMICS_CONTROLLER_PORT
             value: ${APPDYNAMICS_CONTROLLER_PORT}
           - name: APPDYNAMICS_CONTROLLER_SSL_ENABLED
             value: ${APPDYNAMICS_CONTROLLER_SSL_ENABLED}
