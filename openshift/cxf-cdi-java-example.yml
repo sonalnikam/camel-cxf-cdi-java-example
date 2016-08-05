@@ -24,7 +24,7 @@ parameters:
   value: appdynamics-s2i
   required: true
 - description: AppDynamics Controller Host
-  name: CONTROLLER_HOST_NAME
+  name: APPDYNAMICS_CONTROLLER_HOST_NAME
   value: redhatinc298.saas.appdynamics.com
 - description: AppDynamics Controller Port
   name: APPDYNAMICS_CONTROLLER_PORT
@@ -282,15 +282,15 @@ objects:
             value: ${AMQ_PASSWORD}
           - name: TZ
             value: Europe/London
-          - name: CONTROLLER_HOST
-            value: ${CONTROLLER_HOST}
-          - name: CONTROLLER_HOST
+          - name: APPDYNAMICS_CONTROLLER_HOST_NAME
+            value: ${APPDYNAMICS_CONTROLLER_HOST_NAME}
+          - name: APPDYNAMICS_CONTROLLER_PORT
             value: ${APPDYNAMICS_CONTROLLER_PORT}
           - name: APPDYNAMICS_CONTROLLER_SSL_ENABLED
             value: ${APPDYNAMICS_CONTROLLER_SSL_ENABLED}
-          - name: APPDYNAMICS_AGENT_ACCOUNT_NAME_ENV_VAR
+          - name: APPDYNAMICS_AGENT_ACCOUNT_NAME
             value: ${APPDYNAMICS_AGENT_ACCOUNT_NAME}
-          - name: APPDYNAMICS_AGENT_ACCOUNT_ACCESS_KEY_ENV_VAR
+          - name: APPDYNAMICS_AGENT_ACCOUNT_ACCESS_KEY
             value: ${APPDYNAMICS_AGENT_ACCOUNT_ACCESS_KEY}
           - name: APPDYNAMICS_AGENT_APPLICATION_NAME
             value: ${SERVICE_NAME}
