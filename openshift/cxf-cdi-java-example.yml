@@ -17,7 +17,7 @@ parameters:
   required: true
 - description: The source repository
   name: SOURCE_REPOSITORY
-  value: https://github.com/benemon/camel-cxf-cdi-java-example
+  value: https://github.com/sonalnikam/Demmmo.git
   required: true
 - description: Source branch
   name: SOURCE_REF
@@ -25,15 +25,15 @@ parameters:
   required: true
 - description: AppDynamics Controller Host
   name: APPDYNAMICS_CONTROLLER_HOST_NAME
-  value: redhatinc298.saas.appdynamics.com
+  value: atositsolutionsandservicesbv486.saas.appdynamics.com
   required: true
 - description: AppDynamics Controller Port
   name: APPDYNAMICS_CONTROLLER_PORT
-  value: '80'
+  value: '443'
   required: true
 - description: AppDyanamics SSL Enabled
   name: APPDYNAMICS_CONTROLLER_SSL_ENABLED
-  value: 'false'
+  value: 'true'
   required: true
 - description: AppDynamics Agent Account Name
   name: APPDYNAMICS_AGENT_ACCOUNT_NAME
