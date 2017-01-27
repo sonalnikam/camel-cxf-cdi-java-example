@@ -17,7 +17,7 @@ parameters:
   required: true
 - description: The source repository
   name: SOURCE_REPOSITORY
-  value: https://github.com/sonalnikam/Demmmo.gi
+  value: https://github.com/sonalnikam/Demmmo.git
   required: true
 - description: Source branch
   name: SOURCE_REF
